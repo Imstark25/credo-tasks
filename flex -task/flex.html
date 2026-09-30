@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Accessible Button</title>
+
+    <style>
+        button {
+            background-color: blue;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:focus-visible {
+            outline: 3px solid orange;
+            outline-offset: 3px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Accessible Button Example</h2>
+
+    <button
+        type="button"
+        aria-label="Submit the form"
+        onclick="submitForm()">
+
+        Submit
+
+    </button>
+
+    <script>
+        function submitForm() {
+            alert("Form submitted successfully!");
+        }
+    </script>
+
+</body>
+</html>
