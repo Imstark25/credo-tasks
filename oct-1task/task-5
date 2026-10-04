@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Hero</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .hero {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+
+      padding: 60px 8%;
+
+      color: white;
+
+      background:
+        linear-gradient(
+          rgba(0, 0, 0, 0.55),
+          rgba(0, 0, 0, 0.55)
+        ),
+        url("https://picsum.photos/id/1018/1920/1080")
+        center / cover no-repeat;
+    }
+
+    .hero-content {
+      max-width: 650px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      line-height: 1.6;
+      margin-bottom: 30px;
+      color: #eee;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+
+      background: #00bcd4;
+      color: white;
+
+      text-decoration: none;
+      font-weight: bold;
+
+      border-radius: 6px;
+
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #0097a7;
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        min-height: 100svh;
+        padding: 40px 20px;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .hero-content {
+        max-width: 100%;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1>Build Something Amazing</h1>
+
+      <p>
+        Create beautiful, modern and responsive websites
+        that look great on every device.
+      </p>
+
+      <a href="#" class="btn">Get Started</a>
+
+    </div>
+
+  </section>
+
+</body>
+</html>

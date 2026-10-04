@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile Card</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #eef2f3;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .profile-card {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      max-width: 700px;
+      width: 100%;
+      padding: 30px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-card img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .profile-info h2 {
+      margin-bottom: 10px;
+    }
+
+    .profile-info p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      .profile-card {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .profile-card img {
+        width: 140px;
+        height: 140px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="profile-card">
+
+    <img src="https://i.pravatar.cc/300" alt="User profile">
+
+    <div class="profile-info">
+      <h2>John Doe</h2>
+
+      <p>
+        Front-end developer passionate about creating responsive,
+        accessible, and user-friendly websites. I enjoy working
+        with HTML, CSS, JavaScript, and modern web technologies.
+      </p>
+    </div>
+
+  </div>
+
+</body>
+</html>

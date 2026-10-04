@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+    }
+
+    .dashboard {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      grid-template-rows: 70px 1fr;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    .header {
+      grid-column: 1 / -1;
+      background: #1e293b;
+      color: white;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 0 25px;
+    }
+
+    .header h1 {
+      font-size: 22px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background: #0f172a;
+      padding: 25px 15px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      padding: 12px;
+      border-radius: 6px;
+    }
+
+    .sidebar a:hover {
+      background: #334155;
+    }
+
+    /* Main */
+    .main {
+      padding: 25px;
+    }
+
+    .main h2 {
+      margin-bottom: 20px;
+    }
+
+    /* Content Grid */
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #666;
+    }
+
+    @media (max-width: 900px) {
+      .content-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .dashboard {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr;
+      }
+
+      .header {
+        grid-column: 1;
+      }
+
+      .sidebar {
+        flex-direction: row;
+        overflow-x: auto;
+      }
+
+      .sidebar a {
+        white-space: nowrap;
+      }
+
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="dashboard">
+
+    <header class="header">
+      <h1>Dashboard</h1>
+      <span>Admin</span>
+    </header>
+
+    <aside class="sidebar">
+      <a href="#">🏠 Home</a>
+      <a href="#">📊 Analytics</a>
+      <a href="#">👥 Users</a>
+      <a href="#">⚙ Settings</a>
+    </aside>
+
+    <main class="main">
+      <h2>Overview</h2>
+
+      <div class="content-grid">
+
+        <div class="card">
+          <h3>Users</h3>
+          <p>1,250 registered users</p>
+        </div>
+
+        <div class="card">
+          <h3>Revenue</h3>
+          <p>$24,500 this month</p>
+        </div>
+
+        <div class="card">
+          <h3>Orders</h3>
+          <p>850 orders completed</p>
+        </div>
+
+        <div class="card">
+          <h3>Visitors</h3>
+          <p>12,450 visitors</p>
+        </div>
+
+        <div class="card">
+          <h3>Products</h3>
+          <p>320 active products</p>
+        </div>
+
+        <div class="card">
+          <h3>Messages</h3>
+          <p>45 unread messages</p>
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+
+</body>
+</html>
