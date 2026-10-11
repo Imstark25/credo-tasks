@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Playground</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .box {
+            width: 180px;
+            height: 80px;
+            background-color: lightblue;
+            border: 2px solid steelblue;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .padding-box {
+            padding: 20px;
+        }
+
+        .margin-box {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Box Model Playground</h1>
+    <p>Both boxes have the same color. The first uses padding and the second uses margin.</p>
+
+    <div class="box padding-box">Padding: inner space</div>
+    <div class="box margin-box">Margin: outer space</div>
+</body>
+</html>

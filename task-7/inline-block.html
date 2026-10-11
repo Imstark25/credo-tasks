@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline vs Block Elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .block {
+            background-color: lightcoral;
+            margin: 8px 0;
+            padding: 10px;
+        }
+
+        .inline {
+            background-color: lightgreen;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inline vs Block Elements</h1>
+
+    <h2>Block elements</h2>
+    <div class="block">Block 1 uses the full available width.</div>
+    <div class="block">Block 2 starts on a new line.</div>
+
+    <h2>Inline elements</h2>
+    <p>
+        <span class="inline">Inline text 1</span>
+        <span class="inline">Inline text 2</span>
+        <span class="inline">Inline text 3</span>
+        wraps according to its content.
+    </p>
+</body>
+</html>
