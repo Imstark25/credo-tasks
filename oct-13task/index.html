@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Responsive typography and dashboard utility sandbox">
+  <title>Pulseboard | Responsive Utility Sandbox</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Toggle navigation menu">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#" aria-label="Pulseboard home">
+        <span class="brand-mark">P</span>
+        <span>pulseboard</span>
+      </a>
+      <label class="menu-button" for="nav-toggle">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Open navigation</span>
+      </label>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a class="active" href="#overview">Overview</a></li>
+          <li><a href="#insights">Insights</a></li>
+          <li><a href="#activity">Activity</a></li>
+          <li><a href="#settings">Settings</a></li>
+        </ul>
+      </nav>
+      <a class="avatar" href="#profile" aria-label="Open profile">JD</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="overview">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Tuesday, October 13, 2026 <span class="dot"></span> Weekly report</p>
+          <h1 class="display-title">Make your next<br><em>move matter.</em></h1>
+          <p class="hero-subtitle">A focused view of your team's momentum, trends, and opportunities — all in one place.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#insights">Explore insights <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#activity">View activity <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <article class="hero-note text-center-sm">
+          <span class="note-icon">✦</span>
+          <h2 class="text-lg text-xl-md">Good morning, Jordan.</h2>
+          <p>You're on track to beat last month's goal.</p>
+        </article>
+      </div>
+    </section>
+
+    <div class="container dashboard-shell">
+      <aside class="sidebar" aria-label="Dashboard sections">
+        <p class="sidebar-label">Workspace</p>
+        <a class="side-link side-link-active" href="#overview"><span>◈</span> Dashboard</a>
+        <a class="side-link" href="#insights"><span>◒</span> Analytics</a>
+        <a class="side-link" href="#activity"><span>◷</span> Activity</a>
+        <a class="side-link" href="#settings"><span>⚙</span> Preferences</a>
+        <div class="sidebar-divider"></div>
+        <p class="sidebar-label">Your plan</p>
+        <div class="plan-card">
+          <div class="plan-icon">↗</div>
+          <p><strong>Pro workspace</strong><br><span>18 days remaining</span></p>
+          <div class="progress"><span></span></div>
+        </div>
+      </aside>
+
+      <div class="dashboard-content">
+        <section class="section-heading" id="insights">
+          <div>
+            <p class="eyebrow">At a glance</p>
+            <h2 class="text-2xl text-left-md">Your performance snapshot</h2>
+          </div>
+          <button class="filter-button" type="button">Last 30 days <span>⌄</span></button>
+        </section>
+
+        <section class="stats-grid" aria-label="Performance statistics">
+          <article class="stat-card accent-lilac">
+            <div class="stat-top"><span class="stat-label">Total reach</span><span class="trend up">↗ 12.8%</span></div>
+            <p class="stat-value">248.6k</p>
+            <div class="mini-chart chart-purple"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <p class="stat-foot">Compared to 220.4k last month</p>
+          </article>
+          <article class="stat-card accent-mint">
+            <div class="stat-top"><span class="stat-label">Engagement rate</span><span class="trend up">↗ 8.4%</span></div>
+            <p class="stat-value">18.9%</p>
+            <div class="mini-chart chart-mint"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <p class="stat-foot">Your best result this quarter</p>
+          </article>
+          <article class="stat-card accent-peach">
+            <div class="stat-top"><span class="stat-label">Conversions</span><span class="trend down">↘ 2.1%</span></div>
+            <p class="stat-value">1,429</p>
+            <div class="mini-chart chart-peach"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <p class="stat-foot">A little below your monthly target</p>
+          </article>
+        </section>
+
+        <section class="feature-grid" aria-labelledby="feature-grid-title">
+          <div class="section-heading compact">
+            <div>
+              <p class="eyebrow">Keep growing</p>
+              <h2 id="feature-grid-title" class="text-2xl">Your growth toolkit</h2>
+            </div>
+          </div>
+          <div class="feature-columns">
+            <article class="feature-card feature-primary">
+              <div class="feature-number">01</div>
+              <h3>Know your audience</h3>
+              <p>Understand what resonates and turn every interaction into a useful signal.</p>
+              <a href="#audience">Read the report <span>→</span></a>
+            </article>
+            <article class="feature-card feature-secondary">
+              <div class="feature-number">02</div>
+              <h3>Build with intent</h3>
+              <p>Bring your best ideas to life with simple, focused workflows that move work forward.</p>
+              <a href="#workflow">Open workflows <span>→</span></a>
+            </article>
+            <article class="feature-card feature-tertiary">
+              <div class="feature-number">03</div>
+              <h3>Share your story</h3>
+              <p>Make every update count with clear, consistent communication your team can trust.</p>
+              <a href="#story">See examples <span>→</span></a>
+            </article>
+          </div>
+        </section>
+
+        <section class="activity-panel" id="activity" aria-labelledby="activity-title">
+          <div class="section-heading compact">
+            <div>
+              <p class="eyebrow">Recent activity</p>
+              <h2 id="activity-title" class="text-2xl">What's happening</h2>
+            </div>
+            <a class="text-link" href="#all-activity">See all <span>→</span></a>
+          </div>
+          <div class="activity-list">
+            <div class="activity-item"><span class="activity-dot purple"></span><p><strong>Campaign “North Star”</strong> reached 10k views <small>2 hours ago</small></p><span class="activity-value">+24.5%</span></div>
+            <div class="activity-item"><span class="activity-dot green"></span><p><strong>New goal achieved</strong> — engagement is up this week <small>Yesterday</small></p><span class="activity-value">+8.4%</span></div>
+            <div class="activity-item"><span class="activity-dot orange"></span><p><strong>Weekly digest</strong> is ready to review <small>Oct 11, 2026</small></p><a class="review-link" href="#review">Review →</a></div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="settings">
+    <div class="container footer-inner"><span>© 2026 Pulseboard</span><span>Designed for focused teams.</span></div>
+  </footer>
+</body>
+</html>
