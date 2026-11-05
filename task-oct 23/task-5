@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank Account Card</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      font-family: Arial, sans-serif;
+      background: #e8eef5;
+      color: #172033;
+    }
+
+    .account-card {
+      width: min(100%, 420px);
+      padding: 32px;
+      border-radius: 20px;
+      background: linear-gradient(145deg, #19345c, #285a8a);
+      color: #ffffff;
+      box-shadow: 0 16px 35px rgba(25, 52, 92, 0.25);
+    }
+
+    .card-label {
+      margin-bottom: 24px;
+      color: #b7d5f3;
+      font-size: 0.8rem;
+      font-weight: bold;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .account-card h1 {
+      margin-bottom: 28px;
+      font-size: 2rem;
+    }
+
+    .balance-label {
+      margin-bottom: 8px;
+      color: #b7d5f3;
+      font-size: 0.9rem;
+    }
+
+    .balance {
+      margin-bottom: 30px;
+      font-size: 2.4rem;
+      font-weight: bold;
+    }
+
+    .transaction-list {
+      display: grid;
+      gap: 14px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .transaction {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      color: #dceafa;
+    }
+
+    .transaction strong {
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <main class="account-card">
+    <p class="card-label">Bank account</p>
+    <h1 id="account-holder">Ravi</h1>
+    <p class="balance-label">Final balance</p>
+    <p class="balance" id="final-balance">₹0</p>
+
+    <section class="transaction-list" aria-label="Account transactions">
+      <p class="transaction">
+        <span>Initial balance</span>
+        <strong id="initial-balance">₹0</strong>
+      </p>
+      <p class="transaction">
+        <span>Deposit</span>
+        <strong id="deposit-amount">₹0</strong>
+      </p>
+      <p class="transaction">
+        <span>Withdrawal</span>
+        <strong id="withdrawal-amount">₹0</strong>
+      </p>
+    </section>
+  </main>
+
+  <script>
+    const accountHolder = "Ravi";
+    const initialBalance = 5000;
+    const depositAmount = 1000;
+    const withdrawalAmount = 2000;
+    let balance = initialBalance;
+    let withdrawalAllowed = false;
+
+    function depositMoney() {
+      balance += depositAmount;
+      return balance;
+    }
+
+    function withdrawMoney() {
+      withdrawalAllowed = withdrawalAmount <= balance;
+
+      if (withdrawalAllowed) {
+        balance -= withdrawalAmount;
+      }
+
+      return balance;
+    }
+
+    const balanceAfterDeposit = depositMoney();
+    const finalBalance = withdrawMoney();
+
+    console.log("Initial balance:", `₹${initialBalance.toLocaleString("en-IN")}`);
+    console.log("Deposit amount:", `₹${depositAmount.toLocaleString("en-IN")}`);
+    console.log("Balance after deposit:", `₹${balanceAfterDeposit.toLocaleString("en-IN")}`);
+    console.log("Withdrawal amount:", `₹${withdrawalAmount.toLocaleString("en-IN")}`);
+    console.log("Final balance:", `₹${finalBalance.toLocaleString("en-IN")}`);
+
+    document.getElementById("account-holder").textContent = accountHolder;
+    document.getElementById("initial-balance").textContent = `₹${initialBalance.toLocaleString("en-IN")}`;
+    document.getElementById("deposit-amount").textContent = `₹${depositAmount.toLocaleString("en-IN")}`;
+    document.getElementById("withdrawal-amount").textContent = `₹${withdrawalAmount.toLocaleString("en-IN")}`;
+    document.getElementById("final-balance").textContent = `₹${finalBalance.toLocaleString("en-IN")}`;
+  </script>
+</body>
+</html>
